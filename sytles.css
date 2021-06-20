@@ -1,0 +1,80 @@
+.container {
+  text-align: center;
+}
+
+.buttonModal {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  width: 35%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modalContainer {
+  display: none; 
+  position: absolute; 
+  z-index: 1; 
+  padding-top: 150px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: scroll; 
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modalRow {
+  display: flex;
+  border-radius: 8px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #888;
+  width: 50%;
+}
+
+.closeIcon {
+  padding-left: 70%;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeIcon:hover,
+.closeIcon:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-icon-seacrh {
+  position: relative;
+  width: 240px;
+}
+
+.modal-icon-seacrh img {
+  position: absolute;
+  top: 2px;
+}
+
+input[type="text"] {
+  width: 90%;
+}
+
+.modalChild {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #888;
+  border-radius: 8px;
+  width: 50%;
+}
+
+.Copyright_Modal {
+  margin: 200px;
+}
