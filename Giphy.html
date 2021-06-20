@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Giphy API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="sytles.css" />
+    <script type="text/javascript" src="Giphy.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Giphy API</h2>
+      <button id="buttonModal" class="buttonModal" onclick="onClickOpenModal()">
+        GIF
+      </button>
+      <div class="CopyrightModal">
+        © 2021 Copyright:
+        <a href="https://developers.giphy.com/">Giphy API</a>
+      </div>
+    </div>
+
+    <div id="modalContainer" class="modalContainer box">
+      <div class="modalRow">
+        <div class="modalIconSeacrh">
+          <div>
+            <input
+              type="text"
+              id="searchApi"
+              placeholder="Search..."
+              oninput="SearchGighy()"
+            />
+          </div>
+          <div>
+            <img
+              id="myImage"
+              src="https://icons.iconarchive.com/icons/visualpharm/must-have/256/Remove-icon.png"
+              width="20"
+              onclick="cleanInput()"
+            />
+          </div>
+        </div>
+        <span class="closeIcon">&times;</span>
+      </div>
+      <div id="appendChild" class="modalChild"></div>
+    </div>
+  </body>
+</html>
