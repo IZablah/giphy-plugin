@@ -9,36 +9,36 @@
   text-align: center;
   font-size: 16px;
   margin: 4px 2px;
-  width: 35%;
+  width: 10%;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .modalContainer {
-  display: none; 
-  position: absolute; 
-  z-index: 1; 
-  padding-top: 150px; 
+  display: none;
+  position: absolute;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: scroll; 
-  background-color: rgba(0, 0, 0, 0.4); 
+  height: 300px;
+  margin-top: 150px;
+  margin-left: 41%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modalRow {
-  display: flex;
   border-radius: 8px;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 2px solid #888;
-  width: 50%;
+  width: 300px;
+  display: flex;
 }
 
 .closeIcon {
-  padding-left: 70%;
+  padding-left: 50%;
   color: #aaaaaa;
   float: right;
   font-size: 28px;
@@ -48,16 +48,15 @@
 .closeIcon:hover,
 .closeIcon:focus {
   color: #000;
-  text-decoration: none;
   cursor: pointer;
 }
 
-.modal-icon-seacrh {
+.modalIconSeacrh {
   position: relative;
-  width: 240px;
+  display: flex;
 }
 
-.modal-icon-seacrh img {
+.modalIconSeacrh img {
   position: absolute;
   top: 2px;
 }
@@ -72,9 +71,9 @@ input[type="text"] {
   padding: 20px;
   border: 2px solid #888;
   border-radius: 8px;
-  width: 50%;
+  width: 300px;
 }
 
-.Copyright_Modal {
-  margin: 200px;
+.CopyrightModal {
+  margin: 400px;
 }

@@ -1,38 +1,47 @@
-function onClickOpenModal() {
+const onClickOpenModal = () => {
 
-    document.getElementById('my_image').style.display = 'none';
-    var modalContainer = document.getElementById("modalContainer");
+    document.getElementById('myImage').style.display = 'none';
 
-    var buttonModal = document.getElementById('buttonModal');
-    var closeIcon = document.getElementsByClassName("closeIcon")[0];
+    const modalContainer = document.getElementById("modalContainer");
+    const buttonModal = document.getElementById('buttonModal');
+    const closeIcon = document.getElementsByClassName("closeIcon")[0];
 
-    buttonModal.onclick = function () {
-        modalContainer.style.display = "block";
-        loadJSONFile();
+    buttonModal.onclick = () => {
+        console.log(buttonModal.style.display);
+        if (modalContainer.style.display !== "none") {
+            modalContainer.style.display = "none";
+        } else {
+            modalContainer.style.display = "block";
+            loadJSONFile();
+        }
     }
 
-    closeIcon.onclick = function () {
+    closeIcon.onclick = () => {
         modalContainer.style.display = "none";
     }
 
-    window.onclick = function (event) {
+    window.onclick = (event) => {
         if (event.target == modalContainer) {
             modalContainer.style.display = "none";
         }
     }
 }
 
-function cleanInput() {
+const cleanInput = () => {
 
     document.getElementById("searchApi").value = "";
     document.getElementById("appendChild").innerHTML = "";
-    document.getElementById('my_image').style.display = 'none';
+    document.getElementById('myImage').style.display = 'none';
 
     loadJSONFile();
 }
 
-function loadJSONFile() {
+const loadJSONFile = () => {
 
+    document.getElementById("searchApi").value = "";
+    document.getElementById("appendChild").innerHTML = "";
+    document.getElementById('myImage').style.display = 'none';
+    
     const api = 'https://api.giphy.com/v1/gifs/trending?&api_key=SLuR3c3LN86umdxudz2vKPlu5qp27hqk&limit=5';
 
     fetch(api)
@@ -51,20 +60,20 @@ function loadJSONFile() {
         });
 }
 
-function SearchGighy() {
+const SearchGighy = () => {
 
-    document.getElementById('my_image').style.display = 'inline';
-    let searchApiValue = document.getElementById("searchApi").value;
+    document.getElementById('myImage').style.display = 'inline';
+    const searchApiValue = document.getElementById("searchApi").value;
 
-    let api = 'https://api.giphy.com/v1/gifs/search?&api_key=SLuR3c3LN86umdxudz2vKPlu5qp27hqk&q=';
-    let limitElementApi = '&limit=5';
+    const api = 'https://api.giphy.com/v1/gifs/search?&api_key=SLuR3c3LN86umdxudz2vKPlu5qp27hqk&q=';
+    const limitQueryParam = '&limit=5';
 
-    fetch(api + searchApiValue + limitElementApi)
+    fetch(api + searchApiValue + limitQueryParam)
         .then(response => response.json())
         .then(data => {
             for (elements = 0; elements < data.data.length; elements++) {
-                let images = document.createElement("img");
-                let link = document.createElement("a");
+                const images = document.createElement("img");
+                const link = document.createElement("a");
                 link.href = data.data[elements].images.original.url;
                 images.src = data.data[elements].images.original.url;
                 images.alt = data.data[elements].title;

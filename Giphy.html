@@ -11,29 +11,33 @@
     <div class="container">
       <h2>Giphy API</h2>
       <button id="buttonModal" class="buttonModal" onclick="onClickOpenModal()">
-        Open Modal
+        GIF
       </button>
-      <div class="Copyright_Modal">
+      <div class="CopyrightModal">
         © 2021 Copyright:
         <a href="https://developers.giphy.com/">Giphy API</a>
       </div>
     </div>
 
-    <div id="modalContainer" class="modalContainer">
+    <div id="modalContainer" class="modalContainer box">
       <div class="modalRow">
-        <div class="modal-icon-seacrh">
-          <input
-            type="text"
-            id="searchApi"
-            placeholder="Search"
-            oninput="SearchGighy()"
-          />
-          <img
-            id="my_image"
-            src="https://icons.iconarchive.com/icons/visualpharm/must-have/256/Remove-icon.png"
-            width="20"
-            onclick="cleanInput()"
-          />
+        <div class="modalIconSeacrh">
+          <div>
+            <input
+              type="text"
+              id="searchApi"
+              placeholder="Search..."
+              oninput="SearchGighy()"
+            />
+          </div>
+          <div>
+            <img
+              id="myImage"
+              src="https://icons.iconarchive.com/icons/visualpharm/must-have/256/Remove-icon.png"
+              width="20"
+              onclick="cleanInput()"
+            />
+          </div>
         </div>
         <span class="closeIcon">&times;</span>
       </div>
